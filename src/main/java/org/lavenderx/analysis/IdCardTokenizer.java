@@ -110,7 +110,7 @@ public final class IdCardTokenizer extends Tokenizer {
                 idCardTokens.add(stringToTokenize);
                 break;
             case 18:
-                if (stringToTokenize.contains("*")) {
+                if (stringToTokenize.contains("****")) {
                     int firstIndex = stringToTokenize.indexOf("*"), lastIndex = stringToTokenize.lastIndexOf("*");
                     if (firstIndex != -1 && firstIndex == 0) {
                         idCardTokens.add(stringToTokenize.replaceAll("\\*", ""));
@@ -119,9 +119,14 @@ public final class IdCardTokenizer extends Tokenizer {
                         idCardTokens.add(stringToTokenize.substring(0, 10));
                         idCardTokens.add(stringToTokenize.substring(0, 14));
                     } else {
-                        idCardTokens.add(stringToTokenize.substring(0, 6));
-                        idCardTokens.add(stringToTokenize.substring(0, 10));
-                        idCardTokens.add(stringToTokenize.substring(14, 18));
+                        if (lastIndex - firstIndex > 4) {
+                            idCardTokens.add(stringToTokenize.substring(0, 6));
+                            idCardTokens.add(stringToTokenize.substring(14, 18));
+                        } else {
+                            idCardTokens.add(stringToTokenize.substring(0, 6));
+                            idCardTokens.add(stringToTokenize.substring(0, 10));
+                            idCardTokens.add(stringToTokenize.substring(14, 18));
+                        }
                     }
                 } else {
                     idCardTokens.add(stringToTokenize);
@@ -132,7 +137,7 @@ public final class IdCardTokenizer extends Tokenizer {
                 }
                 break;
             default:
-                if (tokenizeLength > 4) idCardTokens.add(stringToTokenize.replaceAll("\\*", ""));
+                if (tokenizeLength > 4) idCardTokens.add(stringToTokenize);
                 break;
         }
     }

@@ -16,7 +16,8 @@ import org.lavenderx.analysis.IdCardTokenizer;
 public class IdCardAnalysisIndicesComponent extends AbstractComponent {
 
     @Inject
-    public IdCardAnalysisIndicesComponent(Settings settings, IndicesAnalysisService indicesAnalysisService,
+    public IdCardAnalysisIndicesComponent(Settings settings,
+                                          IndicesAnalysisService indicesAnalysisService,
                                           Environment env) {
         super(settings);
 

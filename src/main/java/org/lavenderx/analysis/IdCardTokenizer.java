@@ -111,7 +111,8 @@ public final class IdCardTokenizer extends Tokenizer {
                 break;
             case 18:
                 if (stringToTokenize.contains("****")) {
-                    int firstIndex = stringToTokenize.indexOf("*"), lastIndex = stringToTokenize.lastIndexOf("*");
+                    int firstIndex = stringToTokenize.indexOf("*"),
+                            lastIndex = stringToTokenize.lastIndexOf("*");
                     if (firstIndex != -1 && firstIndex == 0) {
                         idCardTokens.add(stringToTokenize.replaceAll("\\*", ""));
                     } else if (lastIndex != -1 && lastIndex == 17) {

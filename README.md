@@ -2,16 +2,20 @@ elasticsearch-analysis-idcard
 -----------------------------
 
 ID card analyzer plugin for elasticsearch.
+
 Analyzer: `idcard`, Tokenizer: `idcard`
 
 Installation
 ------------
 
 1. compile
+
 `mvn clean package`
+
 copy and unzip `target/release/elasticsearch-analysis-idcard-{version}.zip` to `your-es-root/plugins/idcard`
 
 2. restart elasticsearch
+
 
 Quick Start
 -----------

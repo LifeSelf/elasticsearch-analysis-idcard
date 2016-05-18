@@ -10,9 +10,9 @@ Installation
 
 1. compile
 
-`mvn clean package`
+    `mvn clean package`
 
-copy and unzip `target/release/elasticsearch-analysis-idcard-{version}.zip` to `your-es-root/plugins/idcard`
+    copy and unzip `target/release/elasticsearch-analysis-idcard-{version}.zip` to `your-es-root/plugins/idcard`
 
 2. restart elasticsearch
 

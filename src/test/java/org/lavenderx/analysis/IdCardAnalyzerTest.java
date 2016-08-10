@@ -14,7 +14,7 @@ import java.io.StringReader;
 public class IdCardAnalyzerTest {
 
     @Test
-    public void test() throws IOException {
+    public void testAnalyzer() throws IOException {
         IdCardAnalyzer analyzer = new IdCardAnalyzer(Lucene.ANALYZER_VERSION);
         TokenStream tokenStream = analyzer.tokenStream("content", new StringReader("511062199010202689"));
         tokenStream.reset();
